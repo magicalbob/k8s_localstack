@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: localstack-service
+spec:
+  selector:
+    app: localstack
+  ports:
+  - name: localstack-gateway
+    protocol: TCP
+    port: 4566
+    targetPort: 4566
+  - name: localstack-external-services
+    protocol: TCP
+    port: 4550-4559  # External services port range
+    targetPort: 4550-4559
+

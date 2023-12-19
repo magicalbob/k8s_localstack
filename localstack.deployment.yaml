@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: localstack
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: localstack
+  template:
+    metadata:
+      labels:
+        app: localstack
+    spec:
+      containers:
+      - name: localstack
+        image: localstack/localstack
+        ports:
+        - containerPort: 4566  # LocalStack Gateway
+        - containerPort: 4510-4559  # External services port range
+        env:
+        - name: DEBUG
+          value: "1"
+        - name: USE_SSL
+          value: "0"
+        - name: SERVICES
+          value: dynamodb
+        - name: AWS_DEFAULT_REGION
+          value: us-east-1
+      # Add other settings such as volumes, readiness probes, etc.
+
