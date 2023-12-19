@@ -1,18 +1,38 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: localstack-service
+  name: localstack-gateway-service
   namespace: localstack
 spec:
   selector:
     app: localstack
   ports:
-  - name: localstack-gw
+  - name: localstack-gateway
     protocol: TCP
     port: 4566
     targetPort: 4566
-  - name: localstack-external-service
+  type: NodePort
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: localstack-external-services-service
+  namespace: localstack
+spec:
+  selector:
+    app: localstack
+  ports:
+  - name: localstack-external-services
     protocol: TCP
-    port: 4510  # Use a single port for the range
-    targetPort: 4510  # Use a single port for the range
+    port: 4550
+    targetPort: 4550
+    nodePort: 32486 # Replace with your desired node port
+  - name: localstack-external-services-1
+    protocol: TCP
+    port: 4551
+    targetPort: 4551
+    nodePort: 32487 # Replace with your desired node port
+  # Add more ports as needed
+  type: NodePort
 
