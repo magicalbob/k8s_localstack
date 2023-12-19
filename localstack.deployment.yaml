@@ -17,16 +17,28 @@ spec:
       - name: localstack
         image: localstack/localstack
         ports:
-        - name: localstack-gw
-          containerPort: 4566  # LocalStack Gateway
-        env:
-        - name: DEBUG
-          value: "1"
-        - name: USE_SSL
-          value: "0"
-        - name: SERVICES
-          value: dynamodb
-        - name: AWS_DEFAULT_REGION
-          value: us-east-1
-      # Add other settings such as volumes, readiness probes, etc.
+        - containerPort: 4566  # LocalStack Gateway
+        envFrom:
+          - configMapRef:
+              name: localstack-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: localstack-config
+  namespace: localstack
+data:
+  localstack-config.json: |
+    {
+      "services": "dynamodb,sts",
+      "port": 4566,
+      "host": "localhost",
+      "autoshutdown": "0",
+      "env_vars": {
+        "DEBUG": "1",
+        "USE_SSL": "0",
+        "SERVICES": "dynamodb",
+        "AWS_DEFAULT_REGION": "us-east-1"
+      }
+    }
 
