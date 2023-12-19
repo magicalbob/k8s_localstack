@@ -17,8 +17,8 @@ spec:
       - name: localstack
         image: localstack/localstack
         ports:
-        - containerPort: 4566  # LocalStack Gateway
-        - containerPort: 4510-4559  # External services port range
+        - name: localstack-gw
+          containerPort: 4566  # LocalStack Gateway
         env:
         - name: DEBUG
           value: "1"

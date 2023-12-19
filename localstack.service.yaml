@@ -7,12 +7,12 @@ spec:
   selector:
     app: localstack
   ports:
-  - name: localstack-gateway
+  - name: localstack-gw
     protocol: TCP
     port: 4566
     targetPort: 4566
-  - name: localstack-external-services
+  - name: localstack-external-service
     protocol: TCP
-    port: 4550-4559  # External services port range
-    targetPort: 4550-4559
+    port: 4510  # Use a single port for the range
+    targetPort: 4510  # Use a single port for the range
 
