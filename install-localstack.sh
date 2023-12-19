@@ -50,3 +50,11 @@ kubectl apply -f localstack.deployment.yaml
 
 echo create service
 kubectl apply -f localstack.service.yaml
+
+echo wait for deployment to be running
+until kubectl get all -n localstack|grep ^pod/|grep 1/1; do
+  sleep 5
+done
+
+echo create port-forward to access localstack on port 4566
+kubectl port-forward service/localstack-gateway-service -n localstack --address 127.0.0.1 4566:4566 &
