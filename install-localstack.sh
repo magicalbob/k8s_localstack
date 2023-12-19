@@ -32,21 +32,21 @@ if [ "X${USE_KIND}" == "XX" ]; then
     fi
 fi
 
-# add metrics
+echo add metrics
 kubectl apply -f https://dev.ellisbs.co.uk/files/components.yaml
 
-# install local storage
+echo install local storage
 kubectl apply -f  local-storage-class.yaml
 
-# create localstack namespace, if it doesn't exist
+echo create localstack namespace, if it does not exist
 kubectl get ns localstack 2> /dev/null
 if [ $? -eq 1 ]
 then
     kubectl create namespace localstack
 fi
 
-# create deployment
+echo create deployment
 kubectl apply -f localstack.deployment.yaml
 
-# create service
+echo create service
 kubectl apply -f localstack.service.yaml
