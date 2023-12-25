@@ -9,7 +9,7 @@ The install script runs `kubectl port-forward service/localstack-gateway-service
 
 	aws --endpoint-url=http://localhost:4566 dynamodb list-tables 
 
-Currently configured for s3, sts and dynamodb aws services.
+Currently configured for dynamodb, ec2, s3, and sts aws services.
 
 s3:
 ###
@@ -37,6 +37,48 @@ s3:
 	Output:
 
 		2023-12-25 10:04:19         62 credentials
+
+ec2:
+####
+
+	To decribe hosts:
+
+		aws --endpoint-url=http://localhost:4566 ec2 describe-hosts
+
+	Output:
+
+		---------------
+		|DescribeHosts|
+		+-------------+
+
+	To Describe VPCs:
+
+		aws --endpoint-url=http://localhost:4566 ec2 describe-vpcs
+
+	Output:
+
+		--------------------------------------------------
+		|                  DescribeVpcs                  |
+		+------------------------------------------------+
+		||                     Vpcs                     ||
+		|+-----------------------+----------------------+|
+		||  CidrBlock            |  172.31.0.0/16       ||
+		||  DhcpOptionsId        |  default             ||
+		||  InstanceTenancy      |  default             ||
+		||  IsDefault            |  True                ||
+		||  OwnerId              |  000000000000        ||
+		||  State                |  available           ||
+		||  VpcId                |  vpc-f1269111        ||
+		|+-----------------------+----------------------+|
+		|||           CidrBlockAssociationSet          |||
+		||+----------------+---------------------------+||
+		|||  AssociationId |  vpc-cidr-assoc-173ebc71  |||
+		|||  CidrBlock     |  172.31.0.0/16            |||
+		||+----------------+---------------------------+||
+		||||              CidrBlockState              ||||
+		|||+---------------+--------------------------+|||
+		||||  State        |  associated              ||||
+		|||+---------------+--------------------------+|||
 
 requirements.txt includes all the python dependencies for awscli.
 
