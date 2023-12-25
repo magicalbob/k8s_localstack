@@ -30,14 +30,14 @@ metadata:
 data:
   localstack-config.json: |
     {
-      "services": "dynamodb,ec2,s3,sts",
+      "services": "dynamodb,ebs,ec2,s3,sts",
       "port": 4566,
       "host": "localhost",
       "autoshutdown": "0",
       "env_vars": {
         "DEBUG": "1",
         "USE_SSL": "0",
-        "SERVICES": "dynamodb,ec2,s3,sts",
+        "SERVICES": "dynamodb,ebs,ec2,s3,sts",
         "AWS_DEFAULT_REGION": "us-east-1"
       }
     }

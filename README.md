@@ -9,7 +9,7 @@ The install script runs `kubectl port-forward service/localstack-gateway-service
 
 	aws --endpoint-url=http://localhost:4566 dynamodb list-tables 
 
-Currently configured for dynamodb, ec2, s3, and sts aws services.
+Currently configured for dynamodb, ebs, ec2, s3, and sts aws services.
 
 s3:
 ###
@@ -79,6 +79,11 @@ ec2:
 		|||+---------------+--------------------------+|||
 		||||  State        |  associated              ||||
 		|||+---------------+--------------------------+|||
+
+ebs:
+####
+
+	No command's added yet.
 
 requirements.txt includes all the python dependencies for awscli.
 
