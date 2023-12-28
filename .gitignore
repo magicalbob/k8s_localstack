@@ -1,2 +1,4 @@
 kind-config.yaml
 localstack-data
+terraform/.terraform*
+terraform/terraform.tfstate*
