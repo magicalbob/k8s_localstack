@@ -9,13 +9,21 @@ The install script runs `kubectl port-forward service/localstack-gateway-service
 
 	aws --endpoint-url=http://localhost:4566 dynamodb list-tables 
 
-but if you do:
+but you could do:
 
 	alias aws="$(which aws) --endpoint-url=http://192.168.0.10:4566"
 
-you'll be able to just do:
+and you'll be able to just do:
 
 	aws sts get-caller-identity
+
+But that's still over complicated.
+
+Just do:
+
+	export AWS_ENDPOINT_URL=http://192.168.0.10:4566
+
+in your ~/.bashrc or similar.
 
 Currently configured for cloudwatch, dynamodb, ebs, ec2, iam, lambda, s3, and sts aws services.
 
