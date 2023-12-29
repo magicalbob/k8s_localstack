@@ -139,6 +139,11 @@ acm-pca:
 
 	API for service 'acm-pca' not yet implemented or pro feature
 
+amplify:
+########
+
+	API for service 'amplify' is a pro feature
+
 ec2:
 ####
 
