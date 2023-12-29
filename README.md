@@ -74,7 +74,7 @@ Currently configured for:
 | --- | --- |
 |docdb | Don't know |
 | --- | --- |
-|dynamodb | Don't know |
+|dynamodb | Yes |
 | --- | --- |
 |dynamodbstreams | Don't know |
 | --- | --- |
@@ -236,6 +236,18 @@ Currently configured for:
 
 		{
 		    "StackSummaries": []
+		}
+
+## dynamodb:
+
+	To list tables:
+
+		aws dynamodb list-tables 
+
+	Output:
+
+		{
+		    "TableNames": []
 		}
 
 ## ec2:
