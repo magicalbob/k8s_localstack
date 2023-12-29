@@ -121,6 +121,19 @@ Currently configured for:
 	wafv2,
 	xray
 
+acm:
+####
+
+	To list certificates:
+
+		aws acm list-certificates
+
+	Output:
+
+		{
+		    "CertificateSummaryList": []
+		}
+
 ec2:
 ####
 
