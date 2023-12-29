@@ -1,5 +1,4 @@
-Localstack in k8s
-=================
+# Localstack in k8s
 
 A simple deployment of AWS LocalStack.
 
@@ -121,8 +120,7 @@ Currently configured for:
 	wafv2,
 	xray
 
-acm:
-####
+## acm:
 
 	To list certificates:
 
@@ -134,18 +132,15 @@ acm:
 		    "CertificateSummaryList": []
 		}
 
-acm-pca:
-########
+## acm-pca:
 
 	API for service 'acm-pca' not yet implemented or pro feature
 
-amplify:
-########
+## amplify:
 
 	API for service 'amplify' is a pro feature
 
-cloudformation:
-###############
+## cloudformation:
 
 	To list stacks:
 
@@ -157,8 +152,7 @@ cloudformation:
 		    "StackSummaries": []
 		}
 
-ec2:
-####
+## ec2:
 
 	To decribe hosts:
 
@@ -199,13 +193,11 @@ ec2:
 		||||  State        |  associated              ||||
 		|||+---------------+--------------------------+|||
 
-ebs:
-####
+## ebs:
 
 	Not able to test commands yet, but `aws ebs` looks to work.
 
-kms:
-####
+## kms:
 
 	To list keys:
 
@@ -217,8 +209,7 @@ kms:
 	    "Keys": []
 	}
 
-s3:
-###
+## s3:
 
 	To create bucket:
 
