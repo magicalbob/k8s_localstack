@@ -144,6 +144,19 @@ amplify:
 
 	API for service 'amplify' is a pro feature
 
+cloudformation:
+###############
+
+	To list stacks:
+
+		aws cloudformation list-stacks
+
+	Output:
+
+		{
+		    "StackSummaries": []
+		}
+
 ec2:
 ####
 
