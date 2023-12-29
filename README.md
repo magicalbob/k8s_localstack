@@ -254,7 +254,7 @@ Currently configured for:
 
 	To decribe hosts:
 
-		aws --endpoint-url=http://localhost:4566 ec2 describe-hosts
+		aws ec2 describe-hosts
 
 	Output:
 
@@ -264,7 +264,7 @@ Currently configured for:
 
 	To Describe VPCs:
 
-		aws --endpoint-url=http://localhost:4566 ec2 describe-vpcs
+		aws ec2 describe-vpcs
 
 	Output:
 
