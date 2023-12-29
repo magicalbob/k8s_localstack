@@ -121,33 +121,6 @@ Currently configured for:
 	wafv2,
 	xray
 
-s3:
-###
-
-	To create bucket:
-
-		aws --endpoint-url=http://localhost:4566 s3 mb s3://aws
-
-	Output:
-	
-		make_bucket: aws
-
-	To copy a file to that bucket:
-
-		aws --endpoint-url=http://localhost:4566 s3 cp aws/credentials s3://aws
-
-	Output:
-
-		upload: aws/credentials to s3://aws/credentials                 
-
-	To list the buckets content:
-
-		aws --endpoint-url=http://localhost:4566 s3 ls s3://aws
-
-	Output:
-
-		2023-12-25 10:04:19         62 credentials
-
 ec2:
 ####
 
@@ -193,7 +166,47 @@ ec2:
 ebs:
 ####
 
-	No command's added yet.
+	Not able to test commands yet, but `aws ebs` looks to work.
+
+kms:
+####
+
+	To list keys:
+
+		aws kms list-keys
+
+	Output:
+
+	{
+	    "Keys": []
+	}
+
+s3:
+###
+
+	To create bucket:
+
+		aws s3 mb s3://aws
+
+	Output:
+	
+		make_bucket: aws
+
+	To copy a file to that bucket:
+
+		aws s3 cp aws/credentials s3://aws
+
+	Output:
+
+		upload: aws/credentials to s3://aws/credentials                 
+
+	To list the buckets content:
+
+		aws s3 ls s3://aws
+
+	Output:
+
+		2023-12-25 10:04:19         62 credentials
 
 requirements.txt includes all the python dependencies for awscli.
 
