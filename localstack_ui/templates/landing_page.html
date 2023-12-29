@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AWS Services Landing Page</title>
+    <title>AWS Services</title>
 </head>
 <body>
-    <h1>Welcome to the AWS Services Landing Page</h1>
-    <h2>Top-Level Services:</h2>
+    <h1>AWS Services</h1>
     <ul>
-        {% for service in top_level_services %}
-            <li><a href="#">{{ service.service_name }}</a></li>
+        {% for service in services %}
+            <li><a href="{{ service.service_url }}">{{ service.service_name }}</a></li>
         {% endfor %}
     </ul>
 </body>
