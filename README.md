@@ -26,99 +26,193 @@ in your ~/.bashrc or similar.
 
 Currently configured for:
 
-	acm,
-	acm-pca,
-	amplify,
-	apigateway,
-	apigatewayv2,
-	appconfig,
-	appconfigdata,
-	appsync,
-	athena,
-	autoscaling,
-	backup,
-	batch,
-	ce,
-	cloudcontrol,
-	cloudformation,
-	cloudfront,
-	cloudtrail,
-	cloudwatch,
-	codecommit,
-	cognito-identity,
-	cognito-idp,
-	dms,
-	docdb,
-	dynamodb,
-	dynamodbstreams,
-	ec2,
-	ecr,
-	ecs,
-	efs,
-	eks,
-	elasticache,
-	elasticbeanstalk,
-	elbv2,
-	emr,
-	emr-serverless,
-	es,
-	events,
-	firehose,
-	fis,
-	glacier,
-	glue,
-	iam,
-	identitystore,
-	iot,
-	iot-data,
-	iotanalytics,
-	iotwireless,
-	kafka,
-	kinesis,
-	kinesisanalytics,
-	kinesisanalyticsv2,
-	kms,
-	lakeformation,
-	lambda,
-	logs,
-	managedblockchain,
-	mediaconvert,
-	mediastore,
-	mq,
-	mwaa,
-	neptune,
-	opensearch,
-	organizations,
-	pi,
-	qldb,
-	qldb-session,
-	rds,
-	rds-data,
-	redshift,
-	redshift-data,
-	resource-groups,
-	resourcegroupstaggingapi,
-	route53,
-	route53resolver,
-	s3,
-	s3control,
-	sagemaker,
-	sagemaker-runtime,
-	secretsmanager,
-	serverlessrepo,
-	servicediscovery,
-	ses,
-	sesv2,
-	sns,
-	sqs,
-	ssm,
-	stepfunctions,
-	sts,
-	timestream-query,
-	timestream-write,
-	transcribe,
-	wafv2,
-	xray
+|Service                  | Enabled    |
+|-------------------------+------------|
+|acm                      | Yes        |
+|-------------------------+------------|
+|acm-pca                  | No         |
+|-------------------------+------------|
+|amplify                  | No         |
+|-------------------------+------------|
+|apigateway               | Don't know |
+|-------------------------+------------|
+|apigatewayv2             | Don't know |
+|-------------------------+------------|
+|appconfig                | Don't know |
+|-------------------------+------------|
+|appconfigdata            | Don't know |
+|-------------------------+------------|
+|appsync                  | Don't know |
+|-------------------------+------------|
+|athena                   | Don't know |
+|-------------------------+------------|
+|autoscaling              | Don't know |
+|-------------------------+------------|
+|backup                   | Don't know |
+|-------------------------+------------|
+|batch                    | Don't know |
+|-------------------------+------------|
+|ce                       | Don't know |
+|-------------------------+------------|
+|cloudcontrol             | Don't know |
+|-------------------------+------------|
+|cloudformation           | Yes        |
+|-------------------------+------------|
+|cloudfront               | Don't know |
+|-------------------------+------------|
+|cloudtrail               | Don't know |
+|-------------------------+------------|
+|cloudwatch               | Don't know |
+|-------------------------+------------|
+|codecommit               | Don't know |
+|-------------------------+------------|
+|cognito-identity         | Don't know |
+|-------------------------+------------|
+|cognito-idp              | Don't know |
+|-------------------------+------------|
+|dms                      | Don't know |
+|-------------------------+------------|
+|docdb                    | Don't know |
+|-------------------------+------------|
+|dynamodb                 | Don't know |
+|-------------------------+------------|
+|dynamodbstreams          | Don't know |
+|-------------------------+------------|
+|ec2                      | Yes        |
+|-------------------------+------------|
+|ecr                      | Don't know |
+|-------------------------+------------|
+|ecs                      | Don't know |
+|-------------------------+------------|
+|efs                      | Don't know |
+|-------------------------+------------|
+|eks                      | Don't know |
+|-------------------------+------------|
+|elasticache              | Don't know |
+|-------------------------+------------|
+|elasticbeanstalk         | Don't know |
+|-------------------------+------------|
+|elbv2                    | Don't know |
+|-------------------------+------------|
+|emr                      | Don't know |
+|-------------------------+------------|
+|emr-serverless           | Don't know |
+|-------------------------+------------|
+|es                       | Don't know |
+|-------------------------+------------|
+|events                   | Don't know |
+|-------------------------+------------|
+|firehose                 | Don't know |
+|-------------------------+------------|
+|fis                      | Don't know |
+|-------------------------+------------|
+|glacier                  | Don't know |
+|-------------------------+------------|
+|glue                     | Don't know |
+|-------------------------+------------|
+|iam                      | Don't know |
+|-------------------------+------------|
+|identitystore            | Don't know |
+|-------------------------+------------|
+|iot                      | Don't know |
+|-------------------------+------------|
+|iot-data                 | Don't know |
+|-------------------------+------------|
+|iotanalytics             | Don't know |
+|-------------------------+------------|
+|iotwireless              | Don't know |
+|-------------------------+------------|
+|kafka                    | Don't know |
+|-------------------------+------------|
+|kinesis                  | Don't know |
+|-------------------------+------------|
+|kinesisanalytics         | Don't know |
+|-------------------------+------------|
+|kinesisanalyticsv2       | Don't know |
+|-------------------------+------------|
+|kms                      | Yes        |
+|-------------------------+------------|
+|lakeformation            | Don't know |
+|-------------------------+------------|
+|lambda                   | Don't know |
+|-------------------------+------------|
+|logs                     | Don't know |
+|-------------------------+------------|
+|managedblockchain        | Don't know |
+|-------------------------+------------|
+|mediaconvert             | Don't know |
+|-------------------------+------------|
+|mediastore               | Don't know |
+|-------------------------+------------|
+|mq                       | Don't know |
+|-------------------------+------------|
+|mwaa                     | Don't know |
+|-------------------------+------------|
+|neptune                  | Don't know |
+|-------------------------+------------|
+|opensearch               | Don't know |
+|-------------------------+------------|
+|organizations            | Don't know |
+|-------------------------+------------|
+|pi                       | Don't know |
+|-------------------------+------------|
+|qldb                     | Don't know |
+|-------------------------+------------|
+|qldb-session             | Don't know |
+|-------------------------+------------|
+|rds                      | Don't know |
+|-------------------------+------------|
+|rds-data                 | Don't know |
+|-------------------------+------------|
+|redshift                 | Don't know |
+|-------------------------+------------|
+|redshift-data            | Don't know |
+|-------------------------+------------|
+|resource-groups          | Don't know |
+|-------------------------+------------|
+|resourcegroupstaggingapi | Don't know |
+|-------------------------+------------|
+|route53                  | Don't know |
+|-------------------------+------------|
+|route53resolver          | Don't know |
+|-------------------------+------------|
+|s3                       | Yes        |
+|-------------------------+------------|
+|s3control                | Don't know |
+|-------------------------+------------|
+|sagemaker                | Don't know |
+|-------------------------+------------|
+|sagemaker-runtime        | Don't know |
+|-------------------------+------------|
+|secretsmanager           | Don't know |
+|-------------------------+------------|
+|serverlessrepo           | Don't know |
+|-------------------------+------------|
+|servicediscovery         | Don't know |
+|-------------------------+------------|
+|ses                      | Don't know |
+|-------------------------+------------|
+|sesv2                    | Don't know |
+|-------------------------+------------|
+|sns                      | Don't know |
+|-------------------------+------------|
+|sqs                      | Don't know |
+|-------------------------+------------|
+|ssm                      | Don't know |
+|-------------------------+------------|
+|stepfunctions            | Don't know |
+|-------------------------+------------|
+|sts                      | Don't know |
+|-------------------------+------------|
+|timestream-query         | Don't know |
+|-------------------------+------------|
+|timestream-write         | Don't know |
+|-------------------------+------------|
+|transcribe               | Don't know |
+|-------------------------+------------|
+|wafv2                    | Don't know |
+|-------------------------+------------|
+|xray                     | Don't know |
 
 ## acm:
 
@@ -131,14 +225,6 @@ Currently configured for:
 		{
 		    "CertificateSummaryList": []
 		}
-
-## acm-pca:
-
-	API for service 'acm-pca' not yet implemented or pro feature
-
-## amplify:
-
-	API for service 'amplify' is a pro feature
 
 ## cloudformation:
 
@@ -192,10 +278,6 @@ Currently configured for:
 		|||+---------------+--------------------------+|||
 		||||  State        |  associated              ||||
 		|||+---------------+--------------------------+|||
-
-## ebs:
-
-	Not able to test commands yet, but `aws ebs` looks to work.
 
 ## kms:
 
