@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from flask import Flask, render_template
 import json
+import subprocess
 
 app = Flask(__name__)
 
@@ -35,12 +36,12 @@ def item_page(service_url, section_name, item_name):
                 if item['item'] == item_name:
                     info_command = item.get('info_command')
                     if info_command:
-                        # Execute the AWS command (info_command) here
-                        # You can use subprocess or any other method to run the command
-                        # and capture the output
-                        # For simplicity, let's assume info_command_output contains the command output
-                        info_command_output = "Sample output from AWS command"
-                        return render_template('item_page.html', service=service, section=section_name, item=item_name, output=info_command_output)
+                        try:
+                            # Execute the AWS command and capture its output
+                            info_command_output = subprocess.check_output(info_command, shell=True, text=True)
+                            return render_template('item_page.html', service=service, section=section_name, item=item_name, output=info_command_output)
+                        except subprocess.CalledProcessError as e:
+                            return f"Error executing AWS command: {str(e)}"
     return "Service, section, or item not found"
 
 if __name__ == '__main__':
