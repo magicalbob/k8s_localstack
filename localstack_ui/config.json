@@ -1,0 +1,11 @@
+{
+  "top_level_services": [
+    { "service_name": "Certificate Manager" },
+    { "service_name": "Cloudformation" },
+    { "service_name": "DynamoDB" },
+    { "service_name": "EC2" },
+    { "service_name": "Key Management Service" },
+    { "service_name": "S3" }
+  ]
+}
+
