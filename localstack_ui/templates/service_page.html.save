@@ -19,7 +19,7 @@
         <a href="javascript:void(0);" onclick="toggleSubMenu();">Network & Security</a>
         <ul id="submenu" style="display: none;">
 		{% for item in sections %}
-                    <li><a href="{{ url_for('item_page', service_url=service.service_url, section_name='Network & Security', item_name=item.item) }}">{{ item.item }}</a></li>
+                    <li><a href="#">{{ item.item }}</a></li>
                 {% endfor %}
         </ul>
     {% endif %}
