@@ -7,7 +7,7 @@
     <h1>AWS Services</h1>
     <ul>
         {% for service in services %}
-            <li><a href="{{ service.service_url }}">{{ service.service_name }}</a></li>
+            <li><a href="{{ url_for('service', service_url=service['service_url']) }}">{{ service['service_name'] }}</a></li>
         {% endfor %}
     </ul>
 </body>

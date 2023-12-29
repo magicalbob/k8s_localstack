@@ -7,14 +7,10 @@
     { "service_name": "Key Management Service", "service_url": "kms" },
     { "service_name": "S3", "service_url": "s3" }
   ],
-  "EC2": [
-    { "section_name": "Network & Security" }
-  ],
-  "Network & Security": [
-    { "item": "Security Groups" }
-  ],
-  "Items": [
-    { "name": "Security Groups", "info_command": "aws ec2 describe-security-groups --output json" }
-  ]
+  "ec2": {
+    "Network & Security": [
+      { "item": "Security Groups", "info_command": "aws ec2 describe-security-groups --output json" }
+    ]
+  }
 }
 
