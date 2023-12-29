@@ -78,7 +78,9 @@ Currently configured for:
 | --- | --- |
 |dynamodbstreams | Don't know |
 | --- | --- |
-|ec2 | Yes        |
+|ebs | No |
+| --- | --- |
+|ec2 | Yes |
 | --- | --- |
 |ecr | Don't know |
 | --- | --- |
