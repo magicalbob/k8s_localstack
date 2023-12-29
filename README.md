@@ -28,7 +28,7 @@ in your ~/.bashrc or similar.
 Currently configured for:
 
 	acm,
-	acm_pca,
+	acm-pca,
 	amplify,
 	apigateway,
 	apigatewayv2,
@@ -133,6 +133,11 @@ acm:
 		{
 		    "CertificateSummaryList": []
 		}
+
+acm-pca:
+########
+
+	API for service 'acm-pca' not yet implemented or pro feature
 
 ec2:
 ####
