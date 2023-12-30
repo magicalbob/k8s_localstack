@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ service.service_name }} - {{ section }} - {{ item }}</title>
+    <title>{{ service['service_name'] }} - {{ section }} - {{ item }}</title>
 </head>
 <body>
-    <h1>{{ service.service_name }}</h1>
-    <h2>{{ section }}</h2>
-    <h3>{{ item }}</h3>
-    <pre>{{ output }}</pre>
+    <h1>{{ item }}</h1>
+    <div id="json-table">{{ table_html | safe }}</div>
 </body>
 </html>
 
