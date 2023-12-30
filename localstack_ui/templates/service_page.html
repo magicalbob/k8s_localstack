@@ -3,8 +3,8 @@
 <head>
     <title>{{ service.service_name }}</title>
     <script>
-        function toggleSubMenu() {
-            var submenu = document.getElementById('submenu');
+        function toggleSubMenu(submenuId) {
+            var submenu = document.getElementById(submenuId);
             if (submenu.style.display === 'none' || !submenu.style.display) {
                 submenu.style.display = 'block';
             } else {
@@ -15,20 +15,25 @@
 </head>
 <body>
     <h1>{{ service.service_name }}</h1>
-    <div>
-        {% if sections %}
+    {% if sections %}
+        <ul>
             {% for section_name, section_items in sections.items() %}
-                <a href="javascript:void(0);" onclick="toggleSubMenu();">{{ section_name }}</a>
-                <ul id="submenu" style="display: none;">
-                    {% for item in section_items %}
-                        <li>
-                            <a href="{{ url_for('item_page', service_url=service.service_url, section_name=section_name, item_name=item.item) }}">{{ item.item }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleSubMenu('{{ section_name }}-submenu');">
+                        {{ section_name }}
+                    </a>
+                    <ul id="{{ section_name }}-submenu" style="display: none;">
+                        {% for item in section_items %}
+                            <li>
+                                <a href="{{ url_for('item_page', service_url=service.service_url, section_name=section_name, item_name=item.item) }}">
+                                    {{ item.item }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
             {% endfor %}
-        {% endif %}
-    </div>
+        </ul>
+    {% endif %}
 </body>
 </html>
-

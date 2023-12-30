@@ -1,16 +1,17 @@
 {
   "top_level_services": [
     { "service_name": "Certificate Manager", "service_url": "acm" },
-    { "service_name": "Cloudformation" , "service_url": "cloudformation" },
-    { "service_name": "DynamoDB", "service_url": "dynamodb"},
+    { "service_name": "Cloudformation", "service_url": "cloudformation" },
+    { "service_name": "DynamoDB", "service_url": "dynamodb" },
     { "service_name": "EC2", "service_url": "ec2" },
     { "service_name": "Key Management Service", "service_url": "kms" },
     { "service_name": "S3", "service_url": "s3" }
   ],
   "ec2": {
     "Network & Security": [
-      { "item": "Security Groups", "info_command": "aws ec2 describe-security-groups --output json" }
-    ]
+      { "item": "Security Groups", "info_command": "aws ec2 describe-security-groups --output json" },
+      { "item": "Instances", "info_command": "aws ec2 describe-instances --output json" }
+    }
   }
 }
 
