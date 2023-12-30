@@ -14,6 +14,11 @@
       { "item": "Running Instances", "info_command": "./bin/aws_ec2_describe_instances_running.sh" },
       { "item": "Instances", "info_command": "./bin/aws_ec2_describe_instances.sh" }
     ]
+  },
+  "s3": {
+    "Buckets": [
+      { "item": "List", "info_command": "./bin/aws_s3_ls.sh" }
+    ]
   }
 }
 
