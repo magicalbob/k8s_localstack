@@ -1,0 +1,67 @@
+/* Reset some default styles to achieve consistent rendering across browsers */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background-color: #232f3e;
+  color: #fff;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+}
+
+.navigation {
+  background-color: #293742;
+  color: #fff;
+  padding: 20px;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #f2b827;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Define styles for buttons, forms, and other elements as needed */
+
