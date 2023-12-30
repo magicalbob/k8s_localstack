@@ -9,7 +9,7 @@
   ],
   "ec2": {
     "Network & Security": [
-      { "item": "Security Groups", "info_command": "aws ec2 describe-security-groups --output json" } ],
+      { "item": "Security Groups", "info_command": "./bin/aws_ec2_describe_security_groups.sh" } ],
     "Instances": [
       { "item": "Running Instances", "info_command": "aws ec2 describe-instances --filters \"Name=instance-state-name,Values=running\" --output json" },
       { "item": "Instances", "info_command": "aws ec2 describe-instances --output json" }
