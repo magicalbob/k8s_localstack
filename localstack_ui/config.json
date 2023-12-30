@@ -7,6 +7,11 @@
     { "service_name": "Key Management Service", "service_url": "kms" },
     { "service_name": "S3", "service_url": "s3" }
   ],
+  "dynamodb": {
+    "DynamoDB" : [
+      { "item": "List", "info_command": "./bin/aws_dynamodb_ls.sh"}
+    ]
+  },
   "ec2": {
     "Network & Security": [
       { "item": "Security Groups", "info_command": "./bin/aws_ec2_describe_security_groups.sh" } ],
