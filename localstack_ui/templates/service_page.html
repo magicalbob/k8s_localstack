@@ -15,14 +15,25 @@
 </head>
 <body>
     <h1>{{ service.service_name }}</h1>
-    {% if sections %}
-        <a href="javascript:void(0);" onclick="toggleSubMenu();">Network & Security</a>
-        <ul id="submenu" style="display: none;">
-		{% for item in sections %}
-                    <li><a href="{{ url_for('item_page', service_url=service.service_url, section_name='Network & Security', item_name=item.item) }}">{{ item.item }}</a></li>
+    <div>
+        {% if sections %}
+            <a href="javascript:void(0);" onclick="toggleSubMenu();">Network & Security</a>
+            <ul id="submenu" style="display: none;">
+                {% for section_name, section_items in sections.items() %}
+                    <li>
+                        <a href="#">{{ section_name }}</a>
+                        <ul>
+                            {% for item in section_items %}
+                                <li>
+                                    <a href="{{ url_for('item_page', service_url=service.service_url, section_name=section_name, item_name=item.item) }}">{{ item.item }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
                 {% endfor %}
-        </ul>
-    {% endif %}
+            </ul>
+        {% endif %}
+    </div>
 </body>
 </html>
 
