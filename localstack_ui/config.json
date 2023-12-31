@@ -13,12 +13,15 @@
     ]
   },
   "ec2": {
-    "Network & Security": [
-      { "item": "Security Groups", "info_command": "./bin/aws_ec2_describe_security_groups.sh" } ],
     "Instances": [
       { "item": "Running Instances", "info_command": "./bin/aws_ec2_describe_instances_running.sh" },
       { "item": "Instances", "info_command": "./bin/aws_ec2_describe_instances.sh" }
-    ]
+    ],
+    "Images": [
+      { "item": "AMIs", "info_command": "./bin/aws_ec2_describe_images.sh" }
+    ],
+    "Network & Security": [
+      { "item": "Security Groups", "info_command": "./bin/aws_ec2_describe_security_groups.sh" } ]
   },
   "s3": {
     "Buckets": [

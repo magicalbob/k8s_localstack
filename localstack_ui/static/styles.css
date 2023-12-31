@@ -63,5 +63,24 @@ body {
   padding: 20px;
 }
 
+/* Default style for the menu title */
+.menu-title {
+    cursor: pointer;
+    padding-left: 20px; /* Adjust as needed */
+    position: relative;
+}
+
+/* Arrow icon for collapsed menu */
+.menu-title::before {
+    content: "►"; /* Rightward-pointing arrow */
+    position: absolute;
+    left: 0;
+}
+
+/* Arrow icon for expanded menu */
+.menu-title.expanded::before {
+    content: "▼"; /* Downward-pointing arrow */
+}
+
 /* Define styles for buttons, forms, and other elements as needed */
 
