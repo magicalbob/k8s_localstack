@@ -62,7 +62,7 @@ Currently configured for:
 | --- | --- |
 |cloudtrail | Don't know |
 | --- | --- |
-|cloudwatch | Don't know |
+|cloudwatch | Yes |
 | --- | --- |
 |codecommit | Don't know |
 | --- | --- |
@@ -88,7 +88,7 @@ Currently configured for:
 | --- | --- |
 |efs | Don't know |
 | --- | --- |
-|eks | Don't know |
+|eks | No |
 | --- | --- |
 |elasticache | Don't know |
 | --- | --- |
@@ -250,6 +250,18 @@ Currently configured for:
 
 		{
 		    "StackSummaries": []
+		}
+
+## cloudwatch
+
+	To list metrics:
+
+		aws cloudwatch list-metrics
+
+	Output:
+
+		{
+		    "Metrics": []
 		}
 
 ## dynamodb:
