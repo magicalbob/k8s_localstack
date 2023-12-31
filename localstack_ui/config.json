@@ -7,12 +7,30 @@
     { "service_name": "Key Management Service", "service_url": "kms" },
     { "service_name": "S3", "service_url": "s3" }
   ],
+  "dynamodb": {
+    "DynamoDB" : [
+      { "item": "List", "info_command": "./bin/aws_dynamodb_ls.sh"}
+    ]
+  },
   "ec2": {
-    "Network & Security": [
-      { "item": "Security Groups", "info_command": "aws ec2 describe-security-groups --output json" } ],
     "Instances": [
-      { "item": "Running Instances", "info_command": "aws ec2 describe-instances --filters \"Name=instance-state-name,Values=running\" --output json" },
-      { "item": "Instances", "info_command": "aws ec2 describe-instances --output json" }
+      { "item": "Running Instances", "info_command": "./bin/aws_ec2_describe_instances_running.sh" },
+      { "item": "Instances", "info_command": "./bin/aws_ec2_describe_instances.sh" }
+    ],
+    "Images": [
+      { "item": "AMIs", "info_command": "./bin/aws_ec2_describe_images.sh" }
+    ],
+    "Network & Security": [
+      { "item": "Security Groups", "info_command": "./bin/aws_ec2_describe_security_groups.sh" } ]
+  },
+  "kms": {
+    "Keys": [
+      { "item": "List", "info_command": "./bin/aws_kms_list_keys.sh" }
+    ]
+  },
+  "s3": {
+    "Buckets": [
+      { "item": "List", "info_command": "./bin/aws_s3_ls.sh" }
     ]
   }
 }

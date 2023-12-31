@@ -1,6 +1,6 @@
 # Localstack in k8s
 
-A simple deployment of AWS LocalStack.
+A simple deployment of AWS LocalStack in Kubernetes.
 
 Run `./install-localstack.sh` to deploy it.
 
@@ -334,3 +334,7 @@ Currently configured for:
 requirements.txt includes all the python dependencies for awscli.
 
 ./aws contains example ~/.aws/ config and crededentials files with bogus keys.
+
+### localstack_ui
+
+This is a light weight Flask app that gives web access to aws services (either localstack or aws.com).

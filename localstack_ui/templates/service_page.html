@@ -12,6 +12,7 @@
             }
         }
     </script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>{{ service.service_name }}</h1>
@@ -22,7 +23,7 @@
                     <a href="javascript:void(0);" onclick="toggleSubMenu('{{ section_name }}-submenu');">
                         {{ section_name }}
                     </a>
-                    <ul id="{{ section_name }}-submenu" style="display: none;">
+                    <ul id="{{ section_name }}-submenu" class="submenu" style="display: none;">
                         {% for item in section_items %}
                             <li>
                                 <a href="{{ url_for('item_page', service_url=service.service_url, section_name=section_name, item_name=item.item) }}">
@@ -37,3 +38,4 @@
     {% endif %}
 </body>
 </html>
+
