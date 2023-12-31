@@ -34,7 +34,7 @@ Currently configured for:
 | --- | --- |
 |amplify | No         |
 | --- | --- |
-|apigateway | Don't know |
+|apigateway | Yes |
 | --- | --- |
 |apigatewayv2 | Don't know |
 | --- | --- |
@@ -226,6 +226,18 @@ Currently configured for:
 
 		{
 		    "CertificateSummaryList": []
+		}
+
+## apigateway
+
+	To get api keysL
+
+		aws apigateway get-api-keys
+
+	Output:
+
+		{
+		    "items": []
 		}
 
 ## cloudformation:

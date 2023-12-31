@@ -1,5 +1,6 @@
 {
   "top_level_services": [
+    { "service_name": "API Gateway", "service_url": "apigateway" },
     { "service_name": "Certificate Manager", "service_url": "acm" },
     { "service_name": "Cloudformation", "service_url": "cloudformation" },
     { "service_name": "DynamoDB", "service_url": "dynamodb" },
@@ -8,6 +9,11 @@
     { "service_name": "Key Management Service", "service_url": "kms" },
     { "service_name": "S3", "service_url": "s3" }
   ],
+  "apigateway": {
+    "API Key" : [
+      { "item": "Get", "info_command": "./bin/aws_apigateway_get_api_keys.sh"}
+    ]
+  },
   "cloudformation": {
     "Stacks" : [
       { "item": "List", "info_command": "./bin/aws_cloudformation_list_stacks.sh"}
