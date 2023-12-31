@@ -53,5 +53,5 @@ def item_page(service_url, section_name, item_name):
     return "Service or section not found"
 
 if __name__ == '__main__':
-    app.run(debug=True,host="0.0.0.0")
+    app.run(debug=True,host="0.0.0.0",port=8443)
 
