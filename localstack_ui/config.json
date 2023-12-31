@@ -23,6 +23,11 @@
     "Network & Security": [
       { "item": "Security Groups", "info_command": "./bin/aws_ec2_describe_security_groups.sh" } ]
   },
+  "kms": {
+    "Keys": [
+      { "item": "List", "info_command": "./bin/aws_kms_list_keys.sh" }
+    ]
+  },
   "s3": {
     "Buckets": [
       { "item": "List", "info_command": "./bin/aws_s3_ls.sh" }
