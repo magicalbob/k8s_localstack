@@ -136,7 +136,7 @@ Currently configured for:
 | --- | --- |
 |lakeformation | Don't know |
 | --- | --- |
-|lambda | Don't know |
+|lambda | Yes |
 | --- | --- |
 |logs | Don't know |
 | --- | --- |
@@ -292,6 +292,18 @@ Currently configured for:
 		|||+---------------+--------------------------+|||
 		||||  State        |  associated              ||||
 		|||+---------------+--------------------------+|||
+
+## lambda:
+
+	To list functions:
+
+		aws lambda list-functions
+
+	Output:
+
+		{
+		    "Functions": []
+		}
 
 ## kms:
 
