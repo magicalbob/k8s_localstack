@@ -8,6 +8,11 @@
     { "service_name": "Key Management Service", "service_url": "kms" },
     { "service_name": "S3", "service_url": "s3" }
   ],
+  "cloudformation": {
+    "Stacks" : [
+      { "item": "List", "info_command": "./bin/aws_cloudformation_list_stacks.sh"}
+    ]
+  },
   "dynamodb": {
     "DynamoDB" : [
       { "item": "List", "info_command": "./bin/aws_dynamodb_ls.sh"}
