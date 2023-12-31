@@ -82,5 +82,10 @@ body {
     content: "▼"; /* Downward-pointing arrow */
 }
 
+/* Add a class for submenu ul element */
+.submenu {
+    margin-left: 20px; /* Adjust the indentation as needed */
+}
+
 /* Define styles for buttons, forms, and other elements as needed */
 
