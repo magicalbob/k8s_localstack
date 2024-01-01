@@ -43,6 +43,9 @@
       { "item": "Security Groups", "info_command": "./bin/aws_ec2_describe_security_groups.sh" } ]
   },
   "es": {
+    "Domains" : [
+      { "item": "List", "info_command": "./bin/aws_es_list_domain_names.sh"}
+    ],
     "Versions" : [
       { "item": "List", "info_command": "./bin/aws_es_list_elasticsearch_versions.sh"}
     ]

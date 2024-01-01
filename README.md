@@ -319,6 +319,98 @@ Currently configured for:
 
 ## es:
 
+	To create an elasticsearch domain:
+
+		aws es create-elasticsearch-domain --domain-name elastic.example.com
+
+	Output:
+
+		{
+		    "DomainStatus": {
+		        "DomainId": "000000000000/elastic.example.com",
+		        "DomainName": "elastic.example.com",
+		        "ARN": "arn:aws:es:eu-west-2:000000000000:domain/elastic.example.com",
+		        "Created": true,
+		        "Deleted": false,
+		        "Endpoint": "elastic.example.com.eu-west-2.es.localhost.localstack.cloud:4566",
+		        "Processing": true,
+		        "UpgradeProcessing": false,
+		        "ElasticsearchVersion": "7.10",
+		        "ElasticsearchClusterConfig": {
+		            "InstanceType": "m3.medium.elasticsearch",
+		            "InstanceCount": 1,
+		            "DedicatedMasterEnabled": true,
+		            "ZoneAwarenessEnabled": false,
+		            "DedicatedMasterType": "m3.medium.elasticsearch",
+		            "DedicatedMasterCount": 1,
+		            "WarmEnabled": false,
+		            "ColdStorageOptions": {
+		                "Enabled": false
+		            }
+		        },
+		        "EBSOptions": {
+		            "EBSEnabled": true,
+		            "VolumeType": "gp2",
+		            "VolumeSize": 10,
+		            "Iops": 0
+		        },
+		        "AccessPolicies": "",
+		        "SnapshotOptions": {
+		            "AutomatedSnapshotStartHour": 0
+		        },
+		        "CognitoOptions": {
+		            "Enabled": false
+		        },
+		        "EncryptionAtRestOptions": {
+		            "Enabled": false
+		        },
+		        "NodeToNodeEncryptionOptions": {
+		            "Enabled": false
+		        },
+		        "AdvancedOptions": {
+		            "override_main_response_version": "false",
+		            "rest.action.multi.allow_explicit_index": "true"
+		        },
+		        "ServiceSoftwareOptions": {
+		            "CurrentVersion": "",
+		            "NewVersion": "",
+		            "UpdateAvailable": false,
+		            "Cancellable": false,
+		            "UpdateStatus": "COMPLETED",
+		            "Description": "There is no software update available for this domain.",
+		            "AutomatedUpdateDate": 0.0,
+		            "OptionalDeployment": true
+		        },
+		        "DomainEndpointOptions": {
+		            "EnforceHTTPS": false,
+		            "TLSSecurityPolicy": "Policy-Min-TLS-1-0-2019-07",
+		            "CustomEndpointEnabled": false
+		        },
+		        "AdvancedSecurityOptions": {
+		            "Enabled": false,
+		            "InternalUserDatabaseEnabled": false
+		        },
+		        "AutoTuneOptions": {
+		            "State": "ENABLE_IN_PROGRESS"
+		        }
+		    }
+		}
+
+	To list domain names:
+
+		aws es list-domain-names
+
+	Output:
+
+		{
+		    "DomainNames": [
+		        {
+		            "DomainName": "elastic.example.com",
+		            "EngineType": "Elasticsearch"
+		        }
+		    ]
+		}
+
 	To list versions:
 
 		aws es list-elasticsearch-versions
