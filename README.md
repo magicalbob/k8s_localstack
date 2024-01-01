@@ -48,7 +48,7 @@ Currently configured for:
 | --- | --- |
 |autoscaling | Don't know |
 | --- | --- |
-|backup | Don't know |
+|backup | No |
 | --- | --- |
 |batch | Don't know |
 | --- | --- |
