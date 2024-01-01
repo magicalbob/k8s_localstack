@@ -6,6 +6,7 @@
     { "service_name": "Cloudwatch", "service_url": "cloudwatch" },
     { "service_name": "DynamoDB", "service_url": "dynamodb" },
     { "service_name": "EC2", "service_url": "ec2" },
+    { "service_name": "ElasticSearch", "service_url": "es" },
     { "service_name": "Lambda", "service_url": "lambda" },
     { "service_name": "Key Management Service", "service_url": "kms" },
     { "service_name": "S3", "service_url": "s3" }
@@ -40,6 +41,11 @@
     ],
     "Network & Security": [
       { "item": "Security Groups", "info_command": "./bin/aws_ec2_describe_security_groups.sh" } ]
+  },
+  "es": {
+    "Versions" : [
+      { "item": "List", "info_command": "./bin/aws_es_list_elasticsearch_versions.sh"}
+    ]
   },
   "lambda": {
     "Functions" : [

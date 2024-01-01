@@ -100,7 +100,7 @@ Currently configured for:
 | --- | --- |
 |emr-serverless | Don't know |
 | --- | --- |
-|es | Don't know |
+|es | Yes |
 | --- | --- |
 |events | Don't know |
 | --- | --- |
@@ -316,6 +316,44 @@ Currently configured for:
 		|||+---------------+--------------------------+|||
 		||||  State        |  associated              ||||
 		|||+---------------+--------------------------+|||
+
+## es:
+
+	To list versions:
+
+		aws es list-elasticsearch-versions
+
+	Output:
+
+		{
+		    "ElasticsearchVersions": [
+		        "OpenSearch_2.9",
+		        "OpenSearch_2.7",
+		        "OpenSearch_2.5",
+		        "OpenSearch_2.3",
+		        "OpenSearch_1.3",
+		        "OpenSearch_1.2",
+		        "OpenSearch_1.1",
+		        "OpenSearch_1.0",
+		        "7.10",
+		        "7.9",
+		        "7.8",
+		        "7.7",
+		        "7.4",
+		        "7.1",
+		        "6.8",
+		        "6.7",
+		        "6.5",
+		        "6.4",
+		        "6.3",
+		        "6.2",
+		        "6.0",
+		        "5.6",
+		        "5.5",
+		        "5.3",
+		        "5.1"
+		    ]
+		}
 
 ## lambda:
 
