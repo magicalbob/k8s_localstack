@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: localstack
-        image: localstack/localstack
+        image: localstack/localstack:3.0.2
         ports:
         - containerPort: 4566  # LocalStack Gateway
         envFrom:
