@@ -50,7 +50,7 @@ Currently configured for:
 | --- | --- |
 |backup | No |
 | --- | --- |
-|batch | Don't know |
+|batch | No |
 | --- | --- |
 |ce | Don't know |
 | --- | --- |
