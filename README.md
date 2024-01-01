@@ -409,6 +409,14 @@ requirements.txt includes all the python dependencies for awscli.
 
 ./aws contains example ~/.aws/ config and crededentials files with bogus keys.
 
-### localstack_ui
+# localstack_ui
 
 This is a light weight Flask app that gives web access to aws services (either localstack or aws.com).
+
+The `config.json` file defines the services and menus available in the app, and how it should fetch the info from aws. If you have `AWS_ENDPOINT_URL` pointing at localstack it will get the info from there, if you unset that it will get it from aws.com.
+
+# terraform
+
+This is terraform working with localstack.
+
+It implements an EC2 instance, and an ElasticSearch domain.
