@@ -7,6 +7,7 @@
     { "service_name": "DynamoDB", "service_url": "dynamodb" },
     { "service_name": "EC2", "service_url": "ec2" },
     { "service_name": "ElasticSearch", "service_url": "es" },
+    { "service_name": "Events", "service_url": "events" },
     { "service_name": "Lambda", "service_url": "lambda" },
     { "service_name": "Key Management Service", "service_url": "kms" },
     { "service_name": "S3", "service_url": "s3" }
@@ -48,6 +49,11 @@
     ],
     "Versions" : [
       { "item": "List", "info_command": "./bin/aws_es_list_elasticsearch_versions.sh"}
+    ]
+  },
+  "events": {
+    "Connections" : [
+      { "item": "List", "info_command": "./bin/aws_events_list_connections.sh"}
     ]
   },
   "lambda": {

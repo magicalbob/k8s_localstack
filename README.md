@@ -102,7 +102,7 @@ Currently configured for:
 | --- | --- |
 |es | Yes |
 | --- | --- |
-|events | Don't know |
+|events | Yes |
 | --- | --- |
 |firehose | Don't know |
 | --- | --- |
@@ -445,6 +445,18 @@ Currently configured for:
 		        "5.3",
 		        "5.1"
 		    ]
+		}
+
+## events:
+
+	To list connections:
+
+		aws events list-connections
+
+	Output:
+
+		{
+		    "Connections": []
 		}
 
 ## lambda:
