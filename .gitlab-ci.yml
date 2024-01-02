@@ -17,11 +17,12 @@ test_job:
     - ./app_unittest.py
     - ~/.local/bin/coverage run -m unittest app_unittest.py
     - ~/.local/bin/coverage xml
-    - find .
+    - pwd
+    - find . -name coverage.xml
     - rm -rf __pycache__
   artifacts:
     paths:
-      - coverage.xml
+      - localstack_ui/coverage.xml
   variables:
     GIT_STRATEGY: clone
 
