@@ -16,6 +16,7 @@ test_job:
     - cd localstack_ui
     - ./app_unittest.py
     - ~/.local/bin/coverage run -m unittest app_unittest.py
+    - find .
     - ~/.local/bin/coverage xml
     - rm -rf __pycache__
   artifacts:
