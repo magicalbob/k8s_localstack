@@ -17,8 +17,6 @@ test_job:
     - ./app_unittest.py
     - ~/.local/bin/coverage run -m unittest app_unittest.py
     - ~/.local/bin/coverage xml
-    - pwd
-    - find . -name coverage.xml
     - rm -rf __pycache__
   artifacts:
     paths:
