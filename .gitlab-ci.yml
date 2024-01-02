@@ -18,7 +18,6 @@ test_job:
     - sudo apt-get install -y python3-dev python3-pip libasound2-dev
     - pip install -r requirements.txt
     - cd localstack_ui
-    - ./app_unittest.py
     - ~/.local/bin/coverage run -m unittest app_unittest.py
     - ~/.local/bin/coverage xml
     - rm -rf __pycache__
