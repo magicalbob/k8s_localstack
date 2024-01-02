@@ -13,6 +13,7 @@ class TestApp(unittest.TestCase):
         self.app.testing = True
 
     def tearDown(self):
+        # tear down the test, nothing to do
         pass
 
     @patch('subprocess.check_output')
