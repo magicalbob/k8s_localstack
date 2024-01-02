@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 from flask import Flask, render_template
+from flask_wtf.csrf import CSRFProtect
 import json
 import subprocess
 from json2html import json2html
 
 app = Flask(__name__)
+
+# Initialize CSRF protection
+csrf = CSRFProtect(app)
 
 # Read the config.json file
 with open('config.json', 'r') as config_file:
