@@ -48,7 +48,7 @@ scan_job:
     - test_job
   artifacts:
     paths:
-      - /home/gitlab-runner/builds/*/*/*/k8s_localstack/localstack/coverage.xml
+      - localstack_ui/coverage.xml
   variables:
     GIT_STRATEGY: clone
 
