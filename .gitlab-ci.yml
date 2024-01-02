@@ -2,6 +2,10 @@ stages:
  - test
  - scan
 
+variables:
+  SONAR_SCANNER_VERSION: 4.8.0.2856
+  GIT_DEPTH: "0"
+
 test_job:
   stage: test
   tags:
@@ -29,10 +33,21 @@ scan_job:
   tags:
     - linux
   script:
-    - rm -rf __pycache__
-    - sonar-scanner-4.8.0.2856-linux/bin/sonar-scanner
+    - sudo apt-get update
+    - sudo rm -rf /var/lib/dpkg/lock-frontend /var/lib/dpkg/lock /var/cache/debconf/*.dat /var/cache/apt/archives/lock
+    - sudo dpkg --configure -a
+    - sudo apt-get install -f
+    - sudo apt-get install -y unzip default-jre
+    - pushd ~
+    - curl -o /tmp/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip
+    - unzip -n /tmp/sonar-scanner.zip
+    - popd
+    - ~/sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner
   dependencies:
     - test_job
+  artifacts:
+    paths:
+      - coverage.xml
   variables:
     GIT_STRATEGY: clone
 
