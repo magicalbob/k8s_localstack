@@ -4,6 +4,8 @@ from flask import Flask
 from unittest.mock import patch
 from app import app
 
+MOCK_RETURN = '{"test": "data"}'
+
 class TestApp(unittest.TestCase):
 
     def setUp(self):
@@ -24,7 +26,7 @@ class TestApp(unittest.TestCase):
     @patch('subprocess.check_output')
     def test_service_exists(self, mock_check_output):
         # Test case where the service URL exists in config.json
-        mock_check_output.return_value = '{"test": "data"}'
+        mock_check_output.return_value = MOCK_RETURN
         response = self.app.get('/service/apigateway')
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'API Gateway', response.data)
@@ -47,7 +49,7 @@ class TestApp(unittest.TestCase):
     @patch('subprocess.check_output')
     def test_item_page_success(self, mock_check_output):
         # Test case where item page retrieval is successful
-        mock_check_output.return_value = '{"test": "data"}'
+        mock_check_output.return_value = MOCK_RETURN
         response = self.app.get('/apigateway/section/item')
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Service or section not found', response.data)  # This should be present in the JSON response
@@ -55,7 +57,7 @@ class TestApp(unittest.TestCase):
     @patch('subprocess.check_output')
     def test_kms_list_page_success(self, mock_check_output):
         # Test case where kms list page retrieval is successful
-        mock_check_output.return_value = '{"test": "data"}'
+        mock_check_output.return_value = MOCK_RETURN
         response = self.app.get('/kms/Keys/List')
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'List', response.data)  # This should be present in the JSON response
