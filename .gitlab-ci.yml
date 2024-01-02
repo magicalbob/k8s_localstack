@@ -42,12 +42,13 @@ scan_job:
     - curl -o /tmp/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip
     - unzip -n /tmp/sonar-scanner.zip
     - popd
+    - cd localstack_ui
     - ~/sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner
   dependencies:
     - test_job
   artifacts:
     paths:
-      - coverage.xml
+      - localstack/coverage.xml
   variables:
     GIT_STRATEGY: clone
 
