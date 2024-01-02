@@ -52,6 +52,14 @@ class TestApp(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Service or section not found', response.data)  # This should be present in the JSON response
 
+    @patch('subprocess.check_output')
+    def test_kms_list_page_success(self, mock_check_output):
+        # Test case where kms list page retrieval is successful
+        mock_check_output.return_value = '{"test": "data"}'
+        response = self.app.get('/kms/Keys/List')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'List', response.data)  # This should be present in the JSON response
+
 if __name__ == '__main__':
     unittest.main()
 
