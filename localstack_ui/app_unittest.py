@@ -17,17 +17,17 @@ class TestApp(unittest.TestCase):
 
     @patch('subprocess.check_output')
     def test_landing_page(self, mock_check_output):
-        mock_check_output.return_value = '{"top_level_services": []}'
+        mock_check_output.return_value = '{}'
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'No data available.', response.data)
+        self.assertIn(b'AWS Services', response.data)
 
     @patch('subprocess.check_output')
     def test_service_page(self, mock_check_output):
-        mock_check_output.return_value = '{"top_level_services": []}'
+        mock_check_output.return_value = '{}'
         response = self.app.get('/service/test')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'No data available.', response.data)
+        self.assertIn(b'AWS Service - Test', response.data)
 
     @patch('subprocess.check_output')
     def test_item_page(self, mock_check_output):
@@ -52,4 +52,3 @@ class TestApp(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
