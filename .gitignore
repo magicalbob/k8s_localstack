@@ -2,3 +2,4 @@ kind-config.yaml
 localstack-data
 terraform/.terraform*
 terraform/terraform.tfstate*
+localstack_ui/__pycache__/
