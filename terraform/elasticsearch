@@ -21,7 +21,7 @@ resource "aws_elasticsearch_domain" "example_domain" {
         Resource = "arn:aws:es:${var.aws_region}:${var.aws_account_id}:domain/my-elastic-domain/*",
         Condition = {
           IpAddress : {
-            "aws:SourceIp" : "192.168.0.10"
+            "aws:SourceIp" : "127.0.0.1"
           }
         }
       }
@@ -32,4 +32,3 @@ resource "aws_elasticsearch_domain" "example_domain" {
 output "elasticsearch_endpoint" {
   value = aws_elasticsearch_domain.example_domain.endpoint
 }
-
