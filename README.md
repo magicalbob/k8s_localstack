@@ -1,5 +1,7 @@
 # Localstack in k8s
 
+## Kubernetes
+
 A simple deployment of AWS LocalStack in Kubernetes.
 
 Run `./install-localstack.sh` to deploy it.
@@ -23,6 +25,12 @@ Just do:
 	export AWS_ENDPOINT_URL=http://192.168.0.10:4566
 
 in your ~/.bashrc or similar.
+
+## Dockerfile
+
+If you don't want to bother with that k8s nonsense, there's a `docker-compose.yml` that gives you the same thing.
+
+## Config of localstack
 
 Currently configured for:
 
@@ -216,7 +224,7 @@ Currently configured for:
 | --- | --- |
 |xray | Don't know |
 
-## acm:
+### acm:
 
 	To list certificates:
 
@@ -228,7 +236,7 @@ Currently configured for:
 		    "CertificateSummaryList": []
 		}
 
-## apigateway
+### apigateway
 
 	To get api keysL
 
@@ -240,7 +248,7 @@ Currently configured for:
 		    "items": []
 		}
 
-## cloudformation:
+### cloudformation:
 
 	To list stacks:
 
@@ -252,7 +260,7 @@ Currently configured for:
 		    "StackSummaries": []
 		}
 
-## cloudwatch
+### cloudwatch
 
 	To list metrics:
 
@@ -264,7 +272,7 @@ Currently configured for:
 		    "Metrics": []
 		}
 
-## dynamodb:
+### dynamodb:
 
 	To list tables:
 
@@ -276,7 +284,7 @@ Currently configured for:
 		    "TableNames": []
 		}
 
-## ec2:
+### ec2:
 
 	To decribe hosts:
 
@@ -317,7 +325,7 @@ Currently configured for:
 		||||  State        |  associated              ||||
 		|||+---------------+--------------------------+|||
 
-## es:
+### es:
 
 	To create an elasticsearch domain:
 
@@ -447,7 +455,7 @@ Currently configured for:
 		    ]
 		}
 
-## events:
+### events:
 
 	To list connections:
 
@@ -459,7 +467,7 @@ Currently configured for:
 		    "Connections": []
 		}
 
-## lambda:
+### lambda:
 
 	To list functions:
 
@@ -471,7 +479,7 @@ Currently configured for:
 		    "Functions": []
 		}
 
-## kms:
+### kms:
 
 	To list keys:
 
@@ -483,7 +491,7 @@ Currently configured for:
 	    "Keys": []
 	}
 
-## s3:
+### s3:
 
 	To create bucket:
 
