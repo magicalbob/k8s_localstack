@@ -52,7 +52,7 @@ scan_job:
   variables:
     GIT_STRATEGY: clone
 
-scan_job:
+docker_job:
   stage: docker
   tags:
     - linux
