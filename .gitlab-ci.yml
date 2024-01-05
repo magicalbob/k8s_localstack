@@ -1,6 +1,7 @@
 stages:
  - test
  - scan
+ - docker
 
 variables:
   SONAR_SCANNER_VERSION: 4.8.0.2856
@@ -51,3 +52,10 @@ scan_job:
   variables:
     GIT_STRATEGY: clone
 
+scan_job:
+  stage: docker
+  tags:
+    - linux
+  script:
+    - docker-compose up -d
+    - docker-compose down
