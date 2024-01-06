@@ -531,4 +531,8 @@ The `config.json` file defines the services and menus available in the app, and 
 
 This is terraform working with localstack.
 
-It implements an EC2 instance, and an ElasticSearch domain.
+It implements an EC2 instance, an S3 bucket and an ElasticSearch domain.
+
+# pip
+
+Simpler even than using docker-compose explicitly, just `pip install localstack` and then run `localstack start`. In another terminal you can do `localstack status services` to see which have been implemented.
