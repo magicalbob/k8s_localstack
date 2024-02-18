@@ -12,7 +12,7 @@ rsa==4.7.2
 s3transfer==0.10.0
 setuptools==59.8.0
 six==1.16.0
-urllib3==2.0.7
+urllib3==2.2.1
 
 blinker==1.7.0
 click==8.1.7
