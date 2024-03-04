@@ -4,7 +4,7 @@ stages:
  - docker
 
 variables:
-  SONAR_SCANNER_VERSION: 4.8.0.2856
+  SONAR_SCANNER_VERSION: 5.0.1.3006
   GIT_DEPTH: "0"
 
 test_job:
