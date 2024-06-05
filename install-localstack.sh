@@ -59,7 +59,7 @@ done
 echo create port-forward to access localstack on port 4566
 if ! nc -z -w1 192.168.0.10 4566; then
   # Port 4566 is not already forwarded, so execute the port-forwarding command
-  kubectl port-forward service/localstack-gateway-service -n localstack --address 192.168.0.10 4566:4566 &
+  kubectl port-forward service/localstack-gateway-service -n localstack --address 192.168.0.14 4566:4566 &
 else
   echo "Port 4566 is already forwarded."
 fi
