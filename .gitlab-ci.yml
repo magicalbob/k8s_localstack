@@ -44,7 +44,7 @@ scan_job:
     - unzip -n /tmp/sonar-scanner.zip
     - popd
     - cd localstack_ui
-    - ~/sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner
+    - export SONAR_TOKEN=$(echo -n "c3FhXzk5Njc0NmRhMGZiYWNmNTc4ZWNhNTg5NWZmZmM3YWUwMjY3ZGM1ZjkK"|base64 --decode) && ~/sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner -Dsonar.token=$SONAR_TOKEN
   dependencies:
     - test_job
   artifacts:
