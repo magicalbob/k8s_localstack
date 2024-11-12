@@ -8,20 +8,18 @@ variables:
   GIT_DEPTH: "0"
 
 test_job:
+  image: docker.ellisbs.co.uk:5190/ubuntu:24.04
   stage: test
   tags:
     - linux
   script:
-    - sudo apt-get update
-    - sudo rm -rf /var/lib/dpkg/lock-frontend /var/lib/dpkg/lock /var/cache/debconf/*.dat /var/cache/apt/archives/lock
-    - sudo dpkg --configure -a
-    - sudo apt-get install -f
-    - sudo apt-get install -y python3-dev python3-pip libasound2-dev
+    - python3 -m venv /tmp/venv
+    - source /tmp/venv/bin/activate
     - pip install -r requirements.txt
     - pip install coverage
     - cd localstack_ui
-    - ~/.local/bin/coverage run -m unittest app_unittest.py
-    - ~/.local/bin/coverage xml
+    - coverage run -m unittest app_unittest.py
+    - coverage xml
     - rm -rf __pycache__
   artifacts:
     paths:
@@ -30,15 +28,11 @@ test_job:
     GIT_STRATEGY: clone
 
 scan_job:
+  image: docker.ellisbs.co.uk:5190/ubuntu:24.04
   stage: scan
   tags:
     - linux
   script:
-    - sudo apt-get update
-    - sudo rm -rf /var/lib/dpkg/lock-frontend /var/lib/dpkg/lock /var/cache/debconf/*.dat /var/cache/apt/archives/lock
-    - sudo dpkg --configure -a
-    - sudo apt-get install -f
-    - sudo apt-get install -y unzip openjdk-17-jre npm
     - pushd ~
     - curl -o /tmp/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip
     - unzip -n /tmp/sonar-scanner.zip
@@ -54,6 +48,7 @@ scan_job:
     GIT_STRATEGY: clone
 
 docker_job:
+  image: docker.ellisbs.co.uk:5190/ubuntu:24.04
   stage: docker
   tags:
     - linux
