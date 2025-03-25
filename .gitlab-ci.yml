@@ -16,8 +16,6 @@ test_job:
     - python3 -m venv /tmp/venv
     - source /tmp/venv/bin/activate
     - pip install -r requirements.txt
-    - python3 -V
-    - pip freeze
     - pip install coverage
     - cd localstack_ui
     - coverage run -m unittest app_unittest.py
