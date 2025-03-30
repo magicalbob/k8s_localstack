@@ -1,7 +1,7 @@
 version: '3'
 services:
   localstack:
-    image: localstack/localstack:3.4.0
+    image: localstack/localstack:4.3.0
     ports:
       - "4566:4566"  # Expose LocalStack's services on port 4566
     environment:
