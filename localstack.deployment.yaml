@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: localstack
-        image: docker.ellisbs.co.uk:5190/localstack/localstack:3.8.1
+        image: docker.ellisbs.co.uk:5190/localstack/localstack:4.3.0
         ports:
         - containerPort: 4566  # LocalStack Gateway
         envFrom:  # Moved here
